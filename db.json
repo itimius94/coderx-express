@@ -1,0 +1,49 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "title": "Hoa Vang tren co xanh",
+      "desc": "Hay"
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Audi A7",
+      "password": "4297f44b13955235245b2497399d7a93"
+    },
+    {
+      "id": 1,
+      "name": "thucnv",
+      "password": "123456",
+      "isAdmin": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": 0,
+      "bookId": "0",
+      "userId": "0"
+    },
+    {
+      "id": 1,
+      "bookId": "1",
+      "userId": "2"
+    },
+    {
+      "id": 2,
+      "bookId": "0",
+      "userId": "2"
+    },
+    {
+      "id": 3,
+      "bookId": "1",
+      "userId": "1"
+    },
+    {
+      "id": 4,
+      "bookId": "0",
+      "userId": "0"
+    }
+  ]
+}

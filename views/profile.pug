@@ -1,0 +1,23 @@
+doctype html
+// This is a static file
+// served from your routes in server.js
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  meta(name='description' content='A cool thing made with Glitch')
+  title Welcome to Glitch!
+  link#favicon(rel='icon' href='https://docs.oracle.com/favicon.ico' type='image/x-icon')
+
+  // import the webpage's stylesheet
+  link(rel='stylesheet' href='/style.css')
+  link(rel='stylesheet' href='/custom.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+body
+  main
+    form(method='POST' action='/profile/upload' enctype="multipart/form-data")
+      label
+        | Avatar 
+        input(name='avatar' type='file')
+      button(type='submit') Add avatar
+    
