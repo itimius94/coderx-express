@@ -224,6 +224,17 @@ app.get('/api/test', (req, res) => {
   }
 })
 
+app.get('/api/books', (req, res) => {
+  let listBooks = db.get('books').value()
+  const { s = '' } = req.query
+  
+  if (s) {
+    listBooks = listBooks.filter((item) => item.title.toLowerCase().search(s.toLowerCase()) !== -1)
+  }
+  
+  res.json({ "data": listBooks })
+})
+
 
 // listen for requests :)
 const listener = app.listen(process.env.PORT, () => {
