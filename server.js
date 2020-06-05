@@ -8,6 +8,7 @@ const app = express();
 var md5 = require('md5');
 const bcrypt = require('bcrypt');
 const cloudinary = require('cloudinary');
+var cors = require('cors')
 
 
 const low = require('lowdb')
@@ -224,7 +225,7 @@ app.get('/api/test', (req, res) => {
   }
 })
 
-app.get('/api/books', (req, res) => {
+app.get('/api/books',cors(), (req, res) => {
   let listBooks = db.get('books').value()
   const { s = '' } = req.query
   
